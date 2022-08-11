@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>canvas绘制笑脸</title>
+</head>
+<body>
+    <canvas id="lsyCanvas" width="200" height="200"></canvas>
+    
+    <script>
+        const contextCanvas = document.getElementById('lsyCanvas');
+        if(contextCanvas.getContext) {
+            const cxt = contextCanvas.getContext('2d')
+
+            cxt.beginPath();
+            cxt.arc(100, 100, 50, 0, Math.PI * 2, true) // 绘制圆形
+            cxt.moveTo(135, 100)
+            cxt.arc(100, 100, 35, 0, Math.PI, false) // 绘制嘴
+            cxt.moveTo(90,90)
+            cxt.arc(85, 90, 5, 0, Math.PI * 2, true) // 绘制左眼
+            cxt.moveTo(120,90)
+            cxt.arc(115, 90, 5, 0, Math.PI * 2, true) // 绘制右眼
+            cxt.stroke();
+        }
+    </script>
+</body>
+</html>

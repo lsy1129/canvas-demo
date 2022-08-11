@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas绘制三角形</title>
+</head>
+<body>
+    <canvas id="lsyCanvas" width="150" height="150"></canvas>
+    <script>
+        const contextCanvas = document.getElementById('lsyCanvas');
+        if(contextCanvas.getContext) {
+            const cxt = contextCanvas.getContext('2d')
+            cxt.beginPath()
+            cxt.moveTo(75,25)
+            cxt.lineTo(75,75)
+            cxt.lineTo(50,50)
+            cxt.fill()
+        }
+    </script>
+</body>
+</html>
