@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>线形lineWidth属性</title>
+</head>
+<body>
+    <canvas id="lsyCanvas" width="400" height="150"></canvas>
+    <script>
+        const cxt = document.getElementById('lsyCanvas').getContext('2d')
+        for(let i=0; i< 11;i++) {
+            cxt.lineWidth = i+1;
+            cxt.beginPath()
+            cxt.moveTo(5+i*20,5);
+            cxt.lineTo(5+i*20,130)
+            cxt.stroke()
+        }
+    </script>
+</body>
+</html>

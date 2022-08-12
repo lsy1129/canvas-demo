@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas绘制二次贝塞尔曲线</title>
+</head>
+<body>
+    <canvas id="lsyCanvas" width="150" height="150"></canvas>
+    <script>
+        const contextCanvas = document.getElementById('lsyCanvas');
+        if(contextCanvas.getContext) {
+            const cxt = contextCanvas.getContext('2d')
+
+            // 二次贝塞尔曲线
+            cxt.beginPath()
+            cxt.moveTo(75, 25);
+            cxt.quadraticCurveTo(25,25,25,62.5)
+            cxt.quadraticCurveTo(25, 100, 50, 100);
+            cxt.quadraticCurveTo(60, 110, 30, 125);
+            cxt.quadraticCurveTo(70, 110, 65, 100);
+            cxt.quadraticCurveTo(125, 100, 125, 62.5);
+            cxt.quadraticCurveTo(125, 25, 75, 25);
+            cxt.stroke();
+        }
+    </script>
+</body>
+</html>

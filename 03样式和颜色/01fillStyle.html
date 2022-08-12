@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fillStyle示例</title>
+</head>
+<body>
+    <canvas id="lsyCanvas" width="150" height="150"></canvas>
+    <script>
+        const cxt = document.getElementById('lsyCanvas').getContext('2d');
+        for(let i = 0;i<7;i++) {
+            for(let j=0; j<7; j++) {
+                cxt.fillStyle = 'rgb(' + Math.floor(255-42.5*i) + ',' +
+                       Math.floor(255-42.5*j) + ',0)';
+                cxt.fillRect(j*25,i*25,25,25);
+            }
+        }
+    </script>
+</body>
+</html>
